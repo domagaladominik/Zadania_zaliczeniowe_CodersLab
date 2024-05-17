@@ -48,18 +48,18 @@ public class Exercise01 {
 
             WebElement aliasInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("field-alias")));
             aliasInput.sendKeys(alias);
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             driver.findElement(By.id("field-address1")).sendKeys(address);
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             driver.findElement(By.id("field-city")).sendKeys(city);
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             driver.findElement(By.id("field-postcode")).sendKeys(zip);
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             WebElement countryInput = driver.findElement(By.id("field-id_country"));
             Select selectCountry = new Select(countryInput);
             selectCountry.selectByVisibleText(country);
             driver.findElement(By.id("field-phone")).sendKeys(phone);
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (Exception e) {
             System.out.println("Exception occurred: " + e.getMessage());
         } finally {
